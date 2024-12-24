@@ -10,7 +10,13 @@ const PORT = process.env.PORT;
 const authrouter = require("./Routes/AuthRouters");
 const productroute = require("./Routes/ProductRouters");
 
-app.use(cors());
+const corsOptions = {
+  origin: "https://your-frontend-domain.vercel.app", // Replace with your Vercel frontend URL
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // app.use(express.static("public"));
