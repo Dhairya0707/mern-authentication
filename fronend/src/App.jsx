@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./App.css";
 import { Routes, Route, Navigate } from "react-router-dom";
-import HomePage from "./pages/home";
 import SignInPage from "./pages/signin";
 import LoginPage from "./pages/login";
 import NotFoundPage from "./pages/notfound";
