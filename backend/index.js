@@ -11,7 +11,7 @@ const authrouter = require("./Routes/AuthRouters");
 const productroute = require("./Routes/ProductRouters");
 
 const corsOptions = {
-  origin: "https://your-frontend-domain.vercel.app", // Replace with your Vercel frontend URL
+  origin: "https://mern-authentication-sable.vercel.app/", // Replace with your Vercel frontend URL
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   credentials: true,
 };
