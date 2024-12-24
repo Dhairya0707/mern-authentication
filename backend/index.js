@@ -4,7 +4,7 @@ const db = require("./Models/db");
 const usermodel = require("./Models/usersmodel");
 const cors = require("cors");
 require("dotenv").config();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 // const bodyparser = require("body-parser");
 const authrouter = require("./Routes/AuthRouters");
