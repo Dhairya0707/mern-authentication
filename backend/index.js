@@ -1,23 +1,19 @@
 const express = require("express");
 const app = express();
 const db = require("./Models/db");
-const usermodel = require("./Models/usersmodel");
 const cors = require("cors");
 require("dotenv").config();
 const PORT = process.env.PORT || 3000;
 
-// const bodyparser = require("body-parser");
 const authrouter = require("./Routes/AuthRouters");
 const productroute = require("./Routes/ProductRouters");
 
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(express.static("public"));
-// app.use(bodyparser());
 
-app.use("/auth", authrouter);
-app.use("/", productroute);
+app.use("/api/auth", authrouter);
+app.use("/api", productroute);
 
 app.get("/test", (req, res) => {
   res.send("this is for testing check !");

@@ -1,7 +1,6 @@
 const Joi = require("joi");
 
 const signupvalidation = (req, res, next) => {
-  //   console.log("middleware called");
   const uservalid = Joi.object({
     username: Joi.string().min(3).max(100).required(),
     email: Joi.string().email().required(),

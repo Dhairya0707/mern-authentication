@@ -2,33 +2,6 @@ const router = require("express").Router();
 const ensureauth = require("../Middleware/auth");
 const usermodel = require("../Models/usersmodel");
 
-// router.get("/products", ensureauth, (req, res) => {
-//   res.status(200).json([
-//     {
-//       product: "dummy product 1",
-//       details: "small",
-//       price: 9.99,
-//       brand: "Dummy Brand",
-//       category: "Electronics",
-//     },
-//     {
-//       product: "dummy product 2",
-//       details: "medium",
-//       price: 19.99,
-//       brand: "Another Brand",
-//       category: "Fashion",
-//     },
-//     {
-//       product: "dummy product 3",
-//       details: "large",
-//       price: 29.99,
-//       brand: "Big Brand",
-//       category: "Home Goods",
-//     },
-//   ]);
-// });
-
-// Sample protected data
 const protectedProducts = [
   {
     brand: "TideOS",
@@ -70,21 +43,8 @@ const protectedProducts = [
   },
 ];
 
-// Protected products endpoint
 router.get("/products", ensureauth, (req, res) => {
   res.json(protectedProducts);
 });
-
-// router.get("/users", async (req, res) => {
-//   try {
-//     const users = await usermodel.find();
-//     res.json(users);
-//     // return users;
-//   } catch (error) {
-//     console.error("Error fetching users:", error);
-//     res.send(error.message);
-//     // throw error;
-//   }
-// });
 
 module.exports = router;

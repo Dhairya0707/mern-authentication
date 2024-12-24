@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Activity, Lock, Shield, Database } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
-//write this is bycrypty password
+
 const HomepageUi = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -45,7 +45,7 @@ const HomepageUi = () => {
   return (
     <div className="w-screen min-h-screen bg-gray-900">
       <section className="lg:grid">
-        {/* Navigation Bar */}
+     
         <nav className="bg-gray-800 border-b border-gray-700">
           <div className="max-w-7xl mx-auto px-8">
             <div className="flex justify-between h-16 items-center">
@@ -65,7 +65,7 @@ const HomepageUi = () => {
           </div>
         </nav>
 
-        {/* Hero Section */}
+        
         <div className="max-w-7xl mx-auto px-8 py-12">
           <div className="text-center">
             <h2 className="text-3xl font-bold text-white sm:text-4xl mb-4">
@@ -83,7 +83,7 @@ const HomepageUi = () => {
           </div>
         </div>
 
-        {/* Auth Status Cards */}
+   
         <div className="max-w-7xl mx-auto px-8 mb-12">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
@@ -137,7 +137,7 @@ const HomepageUi = () => {
           </div>
         </div>
 
-        {/* Protected Content Section */}
+      
         <div className="max-w-7xl mx-auto px-8 pb-12">
           <div className="bg-gray-800 border border-gray-700 rounded-lg">
             <div className="p-6">
