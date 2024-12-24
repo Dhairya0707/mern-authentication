@@ -36,7 +36,7 @@ const SignInPage = () => {
         return handleError("Password are diff !!");
       }
 
-      const url = "http://localhost:3000/auth/signup";
+      const url = "https://mern-authentication-sable.vercel.app/auth/signup";
 
       fetch(url, {
         method: "POST",

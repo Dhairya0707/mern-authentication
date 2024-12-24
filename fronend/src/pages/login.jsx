@@ -25,7 +25,7 @@ const LoginPage = () => {
     if (!email || !password) {
       return handleError("Fill all places ! ");
     } else {
-      const url = "http://localhost:3000/auth/login";
+      const url = "https://mern-authentication-sable.vercel.app/auth/login";
       fetch(url, {
         method: "POST",
         headers: {

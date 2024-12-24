@@ -18,7 +18,7 @@ const HomepageUi = () => {
     const fetchProducts = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await fetch("http://localhost:3000/products", {
+        const response = await fetch("https://mern-authentication-sable.vercel.app/products", {
           method: "GET",
           headers: {
             Authorization: token,
