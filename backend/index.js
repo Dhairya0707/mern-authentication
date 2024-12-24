@@ -10,13 +10,7 @@ const PORT = process.env.PORT;
 const authrouter = require("./Routes/AuthRouters");
 const productroute = require("./Routes/ProductRouters");
 
-const corsOptions = {
-  origin: "https://mern-authentication-sable.vercel.app/", // Replace with your Vercel frontend URL
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  credentials: true,
-};
-
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // app.use(express.static("public"));
@@ -24,6 +18,10 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/auth", authrouter);
 app.use("/", productroute);
+
+app.get("/test", (req, res) => {
+  res.send("this is for testing check !");
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on : http://localhost:${PORT}`);
